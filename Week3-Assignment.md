@@ -1,79 +1,72 @@
-# 🎨 Week 3: React.js, JSX, and Tailwind CSS – Mastering Front-End Development
+# Week 3 Assignment: React Task Manager with Vite and Tailwind CSS
 
-## 🚀 Objective
-Build a responsive React application using JSX and Tailwind CSS that demonstrates component architecture, state management, hooks usage, and API integration.
+## Objective
 
-## 📂 Tasks
+Build a React application that manages tasks using modern React patterns, including hooks, context, and external API integration. The app should be styled with Tailwind CSS and built with Vite for fast development.
 
-### Task 1: Project Setup
-- Create a new React application using Vite
-- Install and configure Tailwind CSS
-- Set up the project structure with components, pages, and utility folders
-- Configure basic routing using React Router
+## Requirements
 
-### Task 2: Component Architecture
-- Create reusable UI components:
-  - `Button` component with different variants (primary, secondary, danger)
-  - `Card` component for displaying content in a boxed layout
-  - `Navbar` component for site navigation
-  - `Footer` component with links and copyright information
-- Implement a layout component that includes the Navbar and Footer
-- Use props to make components customizable and reusable
+### 1. Project Setup
 
-### Task 3: State Management and Hooks
-- Implement a `TaskManager` component that allows users to:
-  - Add new tasks
-  - Mark tasks as completed
-  - Delete tasks
-  - Filter tasks (All, Active, Completed)
-- Use the following hooks:
-  - `useState` for managing component state
-  - `useEffect` for side effects (e.g., loading saved tasks)
-  - `useContext` for theme management (light/dark mode)
-  - Create a custom hook (e.g., `useLocalStorage`) for persisting tasks
+- Set up a React project using Vite
+- Configure Tailwind CSS for styling
+- Ensure the project structure matches the provided layout
 
-### Task 4: API Integration
-- Fetch data from a public API (e.g., JSONPlaceholder)
-- Display the fetched data in a list or grid layout
-- Implement loading and error states
-- Add pagination or infinite scrolling
-- Create a search feature to filter the API results
+### 2. Reusable UI Components
 
-### Task 5: Styling with Tailwind CSS
-- Create a responsive design that works on mobile, tablet, and desktop
-- Implement a theme switcher (light/dark mode) using Tailwind's dark mode
-- Use Tailwind's utility classes for layout, spacing, typography, and colors
-- Create custom animations or transitions for interactive elements
+- Create a `Button` component that accepts props for variant, size, and onClick handler
+- Create a `TaskManager` component that displays and manages tasks
 
-## 🧪 Expected Outcome
-- A fully functional React application with multiple components
-- Proper state management using React hooks
-- API integration with loading and error handling
-- Responsive design implemented with Tailwind CSS
-- Clean, well-organized code following React best practices
+### 3. State Management
 
-## 🛠️ Setup
-1. Make sure you have Node.js installed (v18 or higher recommended)
-2. Use the provided starter files in this repository
-3. Install the required dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
+- Implement a custom hook `useTasks` for managing task state
+- Use React Context (`TaskContext`) for global state management
+- Handle loading states and errors
 
-## ✅ Submission Instructions
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Complete all the tasks in the assignment
-4. Commit and push your code regularly to show progress
-5. Include in your repository:
-   - All project files with proper organization
-   - A comprehensive README.md with setup instructions
-   - Screenshots of your application in the README.md
-6. Deploy your application to Vercel, Netlify, or GitHub Pages
-7. Add the deployed URL to your README.md
-8. Your submission will be automatically graded based on the criteria in the autograding configuration
-9. The instructor will review your submission after the autograding is complete 
+### 4. API Integration
+
+- Integrate with JSONPlaceholder API to fetch tasks: `https://jsonplaceholder.typicode.com/todos`
+- Implement functions to fetch, add, update, and delete tasks
+- Handle API errors gracefully
+
+### 5. Styling
+
+- Use Tailwind CSS for all styling
+- Ensure responsive design
+- Implement hover states and transitions
+
+## Project Structure
+
+```
+src/
+├── components/       # Reusable UI components
+├── pages/           # Page components
+├── hooks/           # Custom React hooks
+├── context/         # React context providers
+├── api/             # API integration functions
+├── utils/           # Utility functions
+└── App.jsx          # Main application component
+```
+
+## Features to Implement
+
+- Display a list of tasks fetched from the API
+- Add new tasks
+- Mark tasks as completed
+- Delete tasks
+- Filter tasks by status (all, completed, pending)
+- Search tasks by title
+
+## Bonus Features
+
+- Pagination for large task lists
+- Task categories/tags
+- Due dates for tasks
+- Local storage persistence
+
+## Submission
+
+- Ensure all code is well-commented
+- Follow React best practices
+- Test the application thoroughly
+- Provide a README with setup instructions
